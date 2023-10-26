@@ -14,6 +14,7 @@ mongoose.connect(process.env.MONGO_URI,{
 
 app.use(cors())
 app.use(express.json())
+app.use(routes)
 
 app.get('/',(req,res) => {
     res.send('olá mundo')
