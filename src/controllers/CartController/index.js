@@ -10,8 +10,6 @@ const CartController = {
         try {
 
             const createdCart = await Cart.create({...bodyData, username: user_id})
-            await createdCart.populate('products').execPopulate()
-
             return res.status(200).json(createdCart)
 
         } catch(err) {

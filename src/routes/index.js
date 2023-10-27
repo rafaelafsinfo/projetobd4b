@@ -19,7 +19,7 @@ routes.get('/users/:user_id', UserController.getUserById)
 
 routes.post('/sessions', SessionController.createSession)
 
-routes.post('/products/:user_id',ProductController.createProduct)
+routes.post('/products/:user_id',authenticate,ProductController.createProduct)
 routes.get('/:user_id/products', ProductController.getUserProducts)
 routes.patch('/products/:user_id/:product_id', authenticate, ProductController.updateProduct)
 routes.delete('/products/:user_id/:product_id', authenticate, ProductController.deleteProduct)
