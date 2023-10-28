@@ -9,9 +9,7 @@ const { authenticate } = require('../middlewares')
 
 const routes = Router()
 
-routes.get('/', (req, res) => {
-    res.send('Olá Mundo')
-})
+
 
 routes.post('/users', UserController.createUser)
 routes.get('/users', UserController.getUsers)
