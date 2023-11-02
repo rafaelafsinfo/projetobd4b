@@ -22,6 +22,5 @@ def read_tarefas():
 
     return jsonify([tarefa for tarefa in tarefas])
 
-    
 if __name__ == '__main__':
     app.run()
