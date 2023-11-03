@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+    border: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+:root{
+    --cor-primaria:rgb(255, 255, 255);
+    --cor-secundaria: black;
+    --cor-fundo: white;
+}
+
