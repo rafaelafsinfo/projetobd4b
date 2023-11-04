@@ -1,8 +1,8 @@
-import {carrinhoarray} from "./app.js";
+import { arraycarrinho } from "../../app";
 document.addEventListener("DOMContentLoaded", () => {
     const cardsContainer = document.getElementById("cards-container");
 
-    // Função para criar um card com base nos dados do JSON
+
     function createCard(data) {
         const card = document.createElement("div");
         card.classList.add("card");
@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         title.textContent = data.nome;
 
         const id = data._id;
-        console.log(id)
 
         const description = document.createElement("p");
         description.textContent = "descrição: " +data.descricao;
@@ -25,8 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const button = document.createElement("button");
         button.textContent = "Adicionar";
         button.addEventListener("click", () => {
-            carrinhoarray.push(id); 
-            console.log("produto adicionado: "+id);
+            arraycarrinho.push(id); 
+            console.log("produto adicionado: "+arraycarrinho.toString());
             
         });
 
@@ -53,3 +52,4 @@ document.addEventListener("DOMContentLoaded", () => {
             console.error("Erro ao buscar os dados da API:", error);
         });
 })
+    

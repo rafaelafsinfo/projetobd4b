@@ -38,8 +38,6 @@ def deletado_produtos(id=0):
     
     return jsonify(message="deletado com sucesso")
 
-
-
 @app.route('/cart',methods=['POST'])
 def create_cart():
     cart = request.get_json()
@@ -50,7 +48,7 @@ def create_cart():
 def read_cart():
     cart = db.cart.find()
 
-    return jsonify([cart for cart in cart])
+    return jsonify([Cart for Cart in cart])
 
 
 if __name__ == '__main__':

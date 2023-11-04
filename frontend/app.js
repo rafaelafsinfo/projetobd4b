@@ -1,4 +1,3 @@
-export let carrinhoarray = [];
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -7,7 +6,8 @@ const port = 3000;
 app.use(express.static('public'));
 app.use(express.json());
 app.use('/', express.static(__dirname + '/view'));
-
+var arraycarrinho = [] 
+export{arraycarrinho}
 // Array para armazenar os itens do carrinho
 
 
@@ -26,4 +26,4 @@ app.listen(port, function () {
 });
 
 
-module.exports = app,{carrinhoarray};
+module.exports = app;
